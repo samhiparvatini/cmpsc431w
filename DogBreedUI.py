@@ -250,7 +250,7 @@ def delete_trainability_data(breed_name):
 def update_data():
     breed_name = input("Enter breed name to update: ")
     table_menu()
-    table_name = input("Enter your choice (1-7)")
+    table_name = input("Enter your choice (1-7): ")
 
     if table_name == '1':
         update_compatibility_data(breed_name)
@@ -526,8 +526,8 @@ def aggregate_functions():
 #aggregate function in table
 def aggfunc_compatibility():
     try:
-        function = input("Select the function: (SUM, COUNT, AVG, MIN, MAX") 
-        column = input("Select the column that you want to put in order: (breed_name, with_other_pets, with_children, with_seniors, lifestyle_type)")
+        function = input("Select the function: (SUM, COUNT, AVG, MIN, MAX): ") 
+        column = input("Select the column that you want to put in order: (breed_name, with_other_pets, with_children, with_seniors, lifestyle_type): ")
 
         if function not in ['SUM', 'COUNT', 'AVG', 'MIN', 'MAX']:
             raise ValueError("Invalid function.")
@@ -539,8 +539,8 @@ def aggfunc_compatibility():
         error_handling(e)
 def aggfunc_adaptability():
     try:
-        function = input("Select the function: (SUM, COUNT, AVG, MIN, MAX") 
-        column = input("Select the column that you want to put in order: (breed_name, temperament, adjustment, sociability)")
+        function = input("Select the function: (SUM, COUNT, AVG, MIN, MAX): ") 
+        column = input("Select the column that you want to put in order: (breed_name, temperament, adjustment, sociability): ")
 
         if function not in ['SUM', 'COUNT', 'AVG', 'MIN', 'MAX']:
             raise ValueError("Invalid function.")
@@ -552,8 +552,8 @@ def aggfunc_adaptability():
         error_handling(e)
 def aggfunc_grooming():
     try:
-        function = input("Select the function: (SUM, COUNT, AVG, MIN, MAX") 
-        column = input("Select the column that you want to put in order: (breed_name, frequency, shedding_level, coat_type)")
+        function = input("Select the function: (SUM, COUNT, AVG, MIN, MAX) :") 
+        column = input("Select the column that you want to put in order: (breed_name, frequency, shedding_level, coat_type): ")
 
         if function not in ['SUM', 'COUNT', 'AVG', 'MIN', 'MAX']:
             raise ValueError("Invalid function.")
@@ -565,8 +565,8 @@ def aggfunc_grooming():
         error_handling(e)
 def aggfunc_health():
     try:
-        function = input("Select the function: (SUM, COUNT, AVG, MIN, MAX") 
-        column = input("Select the column that you want to put in order: (breed_name, lifespan, health_issues, genetic_disposition)")
+        function = input("Select the function: (SUM, COUNT, AVG, MIN, MAX): ") 
+        column = input("Select the column that you want to put in order: (breed_name, lifespan, health_issues, genetic_disposition): ")
 
         if function not in ['SUM', 'COUNT', 'AVG', 'MIN', 'MAX']:
             raise ValueError("Invalid function.")
@@ -578,8 +578,8 @@ def aggfunc_health():
         error_handling(e)
 def aggfunc_exercise_needs():
     try:
-        function = input("Select the function: (SUM, COUNT, AVG, MIN, MAX") 
-        column = input("Select the column that you want to put in order: (breed_name,  mental_stimulation, exercise_requirements, activity_level, suitability)")
+        function = input("Select the function: (SUM, COUNT, AVG, MIN, MAX): ") 
+        column = input("Select the column that you want to put in order: (breed_name,  mental_stimulation, exercise_requirements, activity_level, suitability): ")
 
         if function not in ['SUM', 'COUNT', 'AVG', 'MIN', 'MAX']:
             raise ValueError("Invalid function.")
@@ -591,8 +591,8 @@ def aggfunc_exercise_needs():
         error_handling(e)
 def aggfunc_appearance():
     try:
-        function = input("Select the function: (SUM, COUNT, AVG, MIN, MAX") 
-        column = input("Select the column that you want to put in order: (breed_name,  physical_features, breed_standards, size, color)")
+        function = input("Select the function: (SUM, COUNT, AVG, MIN, MAX): ") 
+        column = input("Select the column that you want to put in order: (breed_name,  physical_features, breed_standards, size, color): ")
 
         if function not in ['SUM', 'COUNT', 'AVG', 'MIN', 'MAX']:
             raise ValueError("Invalid function.")
@@ -604,8 +604,8 @@ def aggfunc_appearance():
         error_handling(e)
 def aggfunc_trainability():
     try:
-        function = input("Select the function: (SUM, COUNT, AVG, MIN, MAX") 
-        column = input("Select the column that you want to put in order: (breed_name, intelligence_level, trainability_rating, training_methods)")
+        function = input("Select the function: (SUM, COUNT, AVG, MIN, MAX): ") 
+        column = input("Select the column that you want to put in order: (breed_name, intelligence_level, trainability_rating, training_methods): ")
 
         if function not in ['SUM', 'COUNT', 'AVG', 'MIN', 'MAX']:
             raise ValueError("Invalid function.")
@@ -669,8 +669,8 @@ def sort_compatibility():
         error_handling(e)
 def sort_adaptability():
     try:
-        order = input("Select the order of the column: (ASC/DESC)").lower() == 'ASC'
-        column = input("Select the column that you want to put in order: (breed_name, temperament, adjustment, sociability)")
+        order = input("Select the order of the column: (ASC/DESC): ")
+        column = input("Select the column that you want to put in order: (breed_name, temperament, adjustment, sociability): ")
         if order not in ['ASC', 'DESC']:
             raise ValueError("Invalid order. Please enter either 'ASC' or 'DESC'.")
         if column not in ['breed_name', 'temperament', 'adjustment', 'sociability']:
@@ -694,8 +694,8 @@ def sort_adaptability():
         error_handling(e)
 def sort_grooming():
     try:
-        order = input("Select the order of the column: (ASC/DESC)").lower() == 'ASC'
-        column = input("Select the column that you want to put in order: (breed_name, frequency, shedding_level, coat_type)")
+        order = input("Select the order of the column: (ASC/DESC): ")
+        column = input("Select the column that you want to put in order: (breed_name, frequency, shedding_level, coat_type): ")
         if order not in ['ASC', 'DESC']:
             raise ValueError("Invalid order. Please enter either 'ASC' or 'DESC'.")
         if column not in ['breed_name, frequency, shedding_level, coat_type']:
@@ -717,8 +717,8 @@ def sort_grooming():
         error_handling(e)
 def sort_health():
     try:
-        order = input("Select the order of the column: (ASC/DESC)").lower() == 'ASC'
-        column = input("Select the column that you want to put in order: (breed_name, lifespan, health_issues, genetic_disposition)")
+        order = input("Select the order of the column: (ASC/DESC): ")
+        column = input("Select the column that you want to put in order: (breed_name, lifespan, health_issues, genetic_disposition): ")
         if order not in ['ASC', 'DESC']:
             raise ValueError("Invalid order. Please enter either 'ASC' or 'DESC'.")
         if column not in ['breed_name', 'lifespan', 'health_issues', 'genetic_disposition']:
@@ -741,8 +741,8 @@ def sort_health():
         error_handling(e)
 def sort_exercise_needs():
     try:
-        order = input("Select the order of the column: (ASC/DESC)").lower() == 'ASC'
-        column = input("Select the column that you want to put in order: (breed_name,  mental_stimulation, exercise_requirements, activity_level, suitability)")
+        order = input("Select the order of the column: (ASC/DESC): ")
+        column = input("Select the column that you want to put in order: (breed_name,  mental_stimulation, exercise_requirements, activity_level, suitability): ")
         if order not in ['ASC', 'DESC']:
             raise ValueError("Invalid order. Please enter either 'ASC' or 'DESC'.")
         if column not in ['breed_name',  'mental_stimulation', 'exercise_requirements', 'activity_level', 'suitability']:
@@ -767,8 +767,8 @@ def sort_exercise_needs():
         error_handling(e)
 def sort_appearance():
     try:
-        order = input("Select the order of the column: (ASC/DESC)").lower() == 'ASC'
-        column = input("Select the column that you want to put in order: (breed_name,  physical_features, breed_standards, size, color)")
+        order = input("Select the order of the column: (ASC/DESC): ")
+        column = input("Select the column that you want to put in order: (breed_name,  physical_features, breed_standards, size, color): ")
         if order not in ['ASC', 'DESC']:
             raise ValueError("Invalid order. Please enter either 'ASC' or 'DESC'.")
         if column not in ['breed_name',  'physical_features', 'breed_standards', 'size', 'color']:
@@ -791,8 +791,8 @@ def sort_appearance():
         error_handling(e)
 def sort_trainability():
     try:
-        order = input("Select the order of the column: (ASC/DESC)").lower() == 'ASC'
-        column = input("Select the column that you want to put in order: (breed_name, intelligence_level, trainability_rating, training_methods)")
+        order = input("Select the order of the column: (ASC/DESC): ")
+        column = input("Select the column that you want to put in order: (breed_name, intelligence_level, trainability_rating, training_methods): ")
         if order not in ['ASC', 'DESC']:
             raise ValueError("Invalid order. Please enter either 'ASC' or 'DESC'.")
         if column not in ['breed_name', 'intelligence_level', 'trainability_rating', 'training_methods']:
@@ -826,7 +826,7 @@ def joins():
         try:
             first1 = table_name1[0]
             first2 = table_name2[0]
-            cursor.execute(f"SELECT * FROM {table_name1} {first1} INNER JOIN {table_name2} {first2} ON {first1}.breed_name = {first2}.breed_name")
+            cursor.execute(f"SELECT * FROM {table_name1} x FULL OUTER JOIN {table_name2} y ON x.breed_name = y.breed_name")
         except sqlite3.Error as e:
             error_handling(e)   
 
@@ -854,37 +854,37 @@ def grouping():
         print("Invalid choice. Please try again.")
 
 def group_compatibility():
-    column = input("Select the column that you want to put in order: (breed_name, with_other_pets, with_children, with_seniors, lifestyle_type)")
+    column = input("Select the column that you want to put in order: (breed_name, with_other_pets, with_children, with_seniors, lifestyle_type): ")
 
     if column not in ['breed_name', 'with_other_pets', 'with_children', 'with_seniors', 'lifestyle_type']:
         raise ValueError("Invalid column.")
 def group_adaptability():
-    column = input("Select the column that you want to put in order: (breed_name, temperament, adjustment, sociability)")
+    column = input("Select the column that you want to put in order: (breed_name, temperament, adjustment, sociability): ")
 
     if column not in ['breed_name', 'temperament', 'adjustment', 'sociability']:
         raise ValueError("Invalid column.")
 def group_grooming():
-    column = input("Select the column that you want to put in order: (breed_name, frequency, shedding_level, coat_type)")
+    column = input("Select the column that you want to put in order: (breed_name, frequency, shedding_level, coat_type): ")
     
     if column not in ['breed_name, frequency, shedding_level, coat_type']:
         raise ValueError("Invalid column.")
 def group_health():
-    column = input("Select the column that you want to put in order: (breed_name, lifespan, health_issues, genetic_disposition)")
+    column = input("Select the column that you want to put in order: (breed_name, lifespan, health_issues, genetic_disposition): ")
 
     if column not in ['breed_name', 'lifespan', 'health_issues', 'genetic_disposition']:
         raise ValueError("Invalid column.")
 def group_exercise_needs():
-    column = input("Select the column that you want to put in order: (breed_name,  mental_stimulation, exercise_requirements, activity_level, suitability)")
+    column = input("Select the column that you want to put in order: (breed_name,  mental_stimulation, exercise_requirements, activity_level, suitability): ")
     
     if column not in ['breed_name',  'mental_stimulation', 'exercise_requirements', 'activity_level', 'suitability']:
         raise ValueError("Invalid column.") 
 def group_appearance():
-    column = input("Select the column that you want to put in order: (breed_name,  physical_features, breed_standards, size, color)")
+    column = input("Select the column that you want to put in order: (breed_name,  physical_features, breed_standards, size, color): ")
     
     if column not in ['breed_name',  'physical_features', 'breed_standards', 'size', 'color']:
         raise ValueError("Invalid column.")
 def group_trainability():
-    column = input("Select the column that you want to put in order: (breed_name, intelligence_level, trainability_rating, training_methods)")
+    column = input("Select the column that you want to put in order: (breed_name, intelligence_level, trainability_rating, training_methods): ")
 
     if column not in ['breed_name', 'intelligence_level', 'trainability_rating', 'training_methods']:
         raise ValueError("Invalid column.")
