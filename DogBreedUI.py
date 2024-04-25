@@ -911,7 +911,7 @@ def subqueries():
 #transactions
 def transactions():
     try:
-        conn.execute("START TRANSACTION")
+        conn.execute("BEGIN TRANSACTION")
 
         while True:
             display_menu()
@@ -935,9 +935,10 @@ def transactions():
             elif choice == '9':
                 subqueries()
             elif choice == '11':
-                error_handling()
+                e = "Error"
+                error_handling(e)
             elif choice == '12':
-                exit = input("are you sure that you want to exit transactions? (yes/no): ").lower == 'yes'
+                exit = input("are you sure that you want to exit transactions? (yes/no): ")
                 if exit == "yes":
                     break
                 else:
@@ -982,7 +983,8 @@ while True:
     elif choice == '10':
         transactions()
     elif choice == '11':
-        error_handling()
+        e = "Error"
+        error_handling(e)
     elif choice == '12':
         break
     else:
