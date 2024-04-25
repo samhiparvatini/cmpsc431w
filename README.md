@@ -52,7 +52,3 @@ You will see 12 options on the CLI interface window
 Enter the desired number into the input. From there, each option will prompt you with instructions to input desired records, operations, or criteria. Please follow them for a successful operation. Some options will ask you to choose a table to do the desired database operations in. Other options will simply ask to input the desired functions, order, and other operations.
 
 **Have fun!**
-
-
-
-
