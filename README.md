@@ -3,15 +3,16 @@ Setup
 ----------------------
 **1. Installation**
 - You must have Python and SQLite installed on your desktop
-- Clone or download the repository
+- Clone or download the repository into your desired directory
 
 **2. Initialization** 
-Open your terminal window and run these commands: 
+Open your terminal window, navigate to the directory where your .sql and .py files are located, and run these commands: 
 ```
 $ sqlite3
-$ .open DogBreed.db
+$ DogBreed.db
+$ .read DogBreed.sql
 ```
-This will create and open your dog breed database.
+This will create your DogBreed.db from your .sql file.
 
 **3. Running the CLI User Interface**
 Open a new terminal. This will be the terminal for your CLI interface. Run this command.
